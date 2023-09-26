@@ -1,0 +1,53 @@
+/* :root {
+
+} */
+
+#product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 75px;
+}
+
+#product-list h1 {
+  width: 100%;
+}
+
+#product-table {
+  width: 60%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+
+#product-table td {
+  border: solid 1px black;
+}
+
+.new-product-button {
+  width: 60%;
+  display: block;
+}
+
+
+
+
+
+/* Style for a button that looks like an <a> tag */
+.product-button {
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove border */
+  color: #007bff; /* Link text color */
+  text-decoration: underline; /* Add underline */
+  cursor: pointer; /* Add pointer cursor on hover */
+  padding: 0; /* Remove padding and margin to make it more link-like */
+  font-size: inherit; /* Inherit font size from parent */
+}
+
+/* Hover effect */
+.product-button:hover {
+  text-decoration: none; /* Remove underline on hover */
+  color: #0056b3; /* Change text color on hover */
+}

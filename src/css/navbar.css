@@ -1,0 +1,67 @@
+/* Navbar container */
+.custom-navbar {
+  background-color: #740000;
+  color: #fff;
+  padding: 10px 15px;
+  display: flex;
+  /* Use Flexbox */
+  justify-content: space-between;
+  /* Distribute space between brand and links */
+  align-items: center;
+  /* Vertically align items to the center */
+  border-bottom: solid 6px #9d0707;
+  margin-bottom: 5px;
+}
+
+/* Navbar brand styling */
+.custom-navbar-brand {
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  justify-content: flex-start;
+  /* Push the brand to the left */
+}
+
+/* Navbar links styling */
+.custom-navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /* Use Flexbox for the links */
+  align-items: center;
+  /* Vertically align links with the brand */
+  justify-content: flex-end;
+  /* Push the links to the right */
+}
+
+/* Navbar list items styling */
+.custom-nav-item {
+  margin-right: 20px;
+}
+
+/* Navbar link styling */
+.custom-nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s; /* Apply transition to transform property */
+  display: inline-block; /* Ensures inline block layout */
+  vertical-align: middle; /* Vertically align text */
+  margin-left: 15px;
+}
+
+/* Navbar link hover effect */
+.custom-nav-link:hover {
+  color: #ea0707;
+  transform: scale(1.2); /* Scale the text on hover */
+}
+
+
+
+
+
+
+
