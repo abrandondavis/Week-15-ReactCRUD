@@ -26,12 +26,31 @@ function ProductList() {
     setIsModalOpen(true);
   };
 
+
+  // Function to handle the update of products
+  const handleUpdate = async (formData) => {
+    try {
+      // Call your ProductService's updateProduct method to update the product
+      const updatedProduct = await ProductService.updateProduct(editProduct.id, formData);
+
+      // Update the products list in the state with the updated product
+      setProducts((prevProducts) =>
+        prevProducts.map((p) => (p.id === updatedProduct.id ? updatedProduct : p))
+      );
+
+      // Close the modal
+      closeAndClearModal();
+    } catch (error) {
+      console.error('Error updating product:', error);
+    }
+  };
+
   // Function to handle the deletion of products
   const onDeleteClick = async (product) => {
     try {
       // Call your ProductService's deleteProduct method to delete the product
       await ProductService.deleteProduct(product.id);
-  
+
       // After successful deletion, update the products list in the state
       // by filtering out the deleted product
       setProducts((prevProducts) => prevProducts.filter((p) => p.id !== product.id));
@@ -93,6 +112,7 @@ function ProductList() {
         initialProduct={editProduct || null}
         // Function to handle product creation
         onCreate={handleCreate}
+        onUpdate={handleUpdate}
       />
     </div>
   );
